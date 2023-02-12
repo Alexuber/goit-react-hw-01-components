@@ -1,35 +1,36 @@
 import PropTypes from "prop-types";
-
+import {Section, Description, UserImg, UserName, Tag, Location, StatsList, StatsListItem, Quantity, Label} from '../Profile/Profile.styled'
 
 export const Profile = (({username, tag, location, avatar, stats : {followers, views, likes}}) => { 
     
-return <div className="profile">
-<div className="description">
-  <img
+return <Section>
+<Description>
+  <UserImg
     src={avatar}
     alt="User avatar"
-    className="avatar"
   />
-  <p className="name">{username}</p>
-  <p className="tag">@{tag}</p>
-  <p className="location">{location}</p>
-</div>
+  <UserName>{username}</UserName>
+  <Tag>@{tag}</Tag>
+  <Location>{location}</Location>
+</Description>
 
-<ul className="stats">
-  <li>
-    <span className="label">Followers</span>
-    <span className="quantity">{followers}</span>
-  </li>
-  <li>
-    <span className="label">Views</span>
-    <span className="quantity">{views}</span>
-  </li>
-  <li>
-    <span className="label">Likes</span>
-    <span className="quantity">{likes}</span>
-  </li>
-</ul>
-</div>});
+<StatsList>
+  <StatsListItem>
+    <Label>Followers</Label>
+    <Quantity>{followers}</Quantity>
+  </StatsListItem>
+
+  <StatsListItem>
+    <Label>Views</Label>
+    <Quantity>{views}</Quantity>
+  </StatsListItem>
+  
+  <StatsListItem>
+    <Label>Likes</Label>
+    <Quantity>{likes}</Quantity>
+  </StatsListItem>
+</StatsList>
+</Section>});
 
 Profile.propTypes = {
     username: PropTypes.string.isRequired,

@@ -1,29 +1,30 @@
 import PropTypes from "prop-types";
+import {Section, Title, StatList, StatListItem} from '../Statistics/Statistics.styled'
 
 export const Statistics = (({title, stats}) => {
    
   return (
-    <section className="statistics">
+    <Section >
 
       {title !== undefined && (
-        <h2 className="title">{title}</h2>
+        <Title >{title}</Title>
       )}
 
-  <ul className="stat-list">
+  <StatList className="stat-list">
     
     {stats.map(({id, label, percentage}) => {
       return (
 
-        <li className="item" key={id}>
+        <StatListItem color={'#' + (Math.random().toString(16) + '000000').substring(2,8).toUpperCase()} key={id}>
           <span className="label">{label}</span>
           <span className="percentage">{percentage}</span>
-        </li>
+        </StatListItem>
       )
     })}
 
    
-  </ul>
-</section>
+  </StatList>
+</Section>
   )
 });
 
