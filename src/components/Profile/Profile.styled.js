@@ -1,20 +1,29 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  padding: 30px 340px;
+  padding: 50px 340px;
+`;
+
+export const Wrapper = styled.div`
+  background-color: #e7ecf1;
+  width: 600px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const Description = styled.div`
   margin-left: auto;
   margin-right: auto;
-  background-color: #d3d3d3;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  padding-top: 30px;
-  padding-bottom: 30px;
+  width: 350px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 `;
 
 export const UserImg = styled.img`
@@ -30,17 +39,21 @@ export const UserImg = styled.img`
 export const UserName = styled.p`
   display: block;
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 700;
 `;
 
 export const Tag = styled.p`
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  color: #a7a6a6;
 `;
 
 export const Location = styled.p`
   margin: 0;
+  color: #a7a6a6;
 `;
 
 export const StatsList = styled.ul`
@@ -48,8 +61,11 @@ export const StatsList = styled.ul`
   align-items: center;
   justify-content: space-evenly;
   gap: 15px;
-  background-color: #e1e1e1;
+  background-color: #ebf5f7;
   margin: 0;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const StatsListItem = styled.li`
@@ -57,12 +73,11 @@ export const StatsListItem = styled.li`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px 35px;
+  padding: 20px 0;
+  width: 115px;
 
-  border-right: 1px solid grey;
-
-  &:last-child: {
-    border-right: none;
+  &:not(:last-child) {
+    border-right: 1px solid #c9c9c9;
   }
 `;
 
@@ -72,4 +87,5 @@ export const Quantity = styled.span`
 
 export const Label = styled.span`
   color: gray;
+  margin-bottom: 10px;
 `;

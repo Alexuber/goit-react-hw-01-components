@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  margin-left: auto;
-  margin-right: auto;
+  padding: 50px 0;
 `;
 
 export const FriendsList = styled.ul`
-  width: 100px;
   margin-left: auto;
   margin-right: auto;
+  width: 265px;
 `;

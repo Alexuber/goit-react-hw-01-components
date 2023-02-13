@@ -31,5 +31,6 @@ export const UserImg = styled.img`
 `;
 
 export const UserName = styled.p`
-  font-size: 16px;
+  font-size: 22px;
+  font-weight: 700;
 `;
