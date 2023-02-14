@@ -8,25 +8,17 @@ import {
   Label,
   Percentage,
 } from '../Statistics/Statistics.styled';
+import getRandomHexColor from '../../utils/getRandomHexColor';
 
 export const Statistics = ({ title, stats = [] }) => {
   return (
     <Section>
       <Wrapper>
         {title !== undefined && <Title>{title}</Title>}
-
         <StatList className="stat-list">
           {stats.map(({ id, label, percentage }) => {
             return (
-              <StatListItem
-                color={
-                  '#' +
-                  (Math.random().toString(16) + '000000')
-                    .substring(2, 8)
-                    .toUpperCase()
-                }
-                key={id}
-              >
+              <StatListItem color={getRandomHexColor()} key={id}>
                 <Label className="label">{label}</Label>
                 <Percentage className="percentage">{percentage}%</Percentage>
               </StatListItem>

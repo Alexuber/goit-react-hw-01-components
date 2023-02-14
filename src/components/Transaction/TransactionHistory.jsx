@@ -12,7 +12,6 @@ export const TransactionHistory = ({ items = [] }) => {
           <HeadTh>Currency</HeadTh>
         </tr>
       </Thead>
-
       <tbody>
         {items.map(transaction => {
           return (
